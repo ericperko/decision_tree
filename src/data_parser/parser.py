@@ -25,8 +25,13 @@ def parse(problem_set):
                        continue
                else:
                    label, values = line.split(":")
-                   columns[(i-1,label)] = values.split(",")
+                   columns[i-1] = (label, values.split(","))
                    i += 1
-        print columns
+            columns[len(columns)-1] = 
+    with open("../prog1data/{0}/{0}.data".format(problem_set)) as data_file:
+        i = 0
+        for line in data_file:
+            line = line.strip()
+    
                
             
