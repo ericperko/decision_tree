@@ -1,0 +1,11 @@
+//The last column is the class label
+1, red, 0.1, circle, 1
+2, blue, 0.2, triangle, 1
+3,green, 0.3, triangle, 0
+4,green, 0.3,circle, 0
+5,	green, 0.4, square, 0
+6,red, 0.4, triangle, 1  //another comment
+7, blue, 0.6, circle, 0
+8, red, 0.7, square, 0
+
+9, blue, 0.8, square, 0
