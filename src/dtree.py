@@ -35,4 +35,4 @@ def main(args):
 
 if __name__ == "__main__":
 #    main(sys.argv[1:])
-    main(["example", "1", "10", "0", "0"])
+    main(["example", "1", "3", "0", "0"])
