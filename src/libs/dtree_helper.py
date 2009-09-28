@@ -1,5 +1,6 @@
 from __future__ import division
 import math
+import pdb
 
 def calcMaxIG(examples, columns):
     maxIG = 0
@@ -25,7 +26,7 @@ def calcIG(x, examples, columns):
     prob_neg = len(label_neg)/len(examples)
 
     if "continuous" in columns[x+1][1]:
-        pass
+        return (-1, None)
     else:
         for value in columns[x+1][1]:
             value_pos_pos = filter(lambda(y): y[x] == value, label_pos)
@@ -57,5 +58,14 @@ def calcLog(p):
         return 0
     else:
         return -1*p*math.log(p, 2)
+
+def find_separating_values(examples, columns):
+    separating_values = {}
+    for key in columns:
+        if "continuous" in columns[key][1]:
+            examples2 = map(lambda(x): (x[key-1], x[-1]), examples)
+            examples2 = list(set(examples2))
+            examples2.sort(key=lambda(x): x[0])
+            print examples2
         
     

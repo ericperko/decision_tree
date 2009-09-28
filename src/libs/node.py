@@ -1,13 +1,12 @@
 from __future__ import division
-import pdb
 
 from libs.dtree_helper import calcEntropy
 from libs.dtree_helper import calcMaxIG
 
 class Node():
-    def __init__(self, examples, columns, use_gain_ratio, pruning_threshhold, max_tree_depth):
+    def __init__(self, examples, columns, use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_depth, possible_separating_values):
         self.children = {}
-        self.test = None
+        self.test_func = None
         self.feature = None
         self.label = None
 
@@ -34,9 +33,9 @@ class Node():
                 pass
 
             self.feature = feature
-            self.test = function
+            self.test_func = function
 
-            if max_tree_depth == 0:
+            if max_tree_depth == 0 and not use_max_depth:
                 if pruning_value <= pruning_threshhold:
                     if len(label_pos) >= len(label_neg):
                         self.label = "1"
@@ -50,5 +49,20 @@ class Node():
                     else:
                         for value in columns[self.feature+1][1]:
                             nodes_with_value = filter(lambda(y): y[self.feature] == value, examples)
-                            self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth)
-                
+                            if len(nodes_with_value) > 0:
+                                self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_depth, possible_separating_values)
+            elif max_tree_depth > 0:
+                max_tree_depth -= 1
+                new_columns = columns.copy()
+                del new_columns[self.feature+1]
+                if "continuous" in columns[self.feature+1][1]:
+                    pass
+                else:
+                    for value in columns[self.feature+1][1]:
+                        nodes_with_value = filter(lambda(y): y[self.feature] == value, examples)
+                        self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_depth, possible_separating_values)
+            elif max_tree_depth == 1 and use_max_depth:
+                if len(label_pos) >= len(label_neg):
+                    self.label = "1"
+                else:
+                    self.label = "0"

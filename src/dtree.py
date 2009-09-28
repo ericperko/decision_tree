@@ -3,6 +3,8 @@ import sys
 import data_parser.parser
 import libs.folds
 import libs.node
+import libs.dtree_predict
+import libs.dtree_helper
 
 def main(args):
     problem_name, option1, option2, option3, option4 = args
@@ -39,7 +41,10 @@ def main(args):
         for j in range(0, num_folds):
             if i != j:
                 examples.extend(stratified_folds[j].examples())
-        root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth)
+
+        possible_separating_values = libs.dtree_helper.find_separating_values(examples, columns2)
+        root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), possible_separating_values)
+        result = libs.dtree_predict.test_tree(root, stratified_folds[i].examples())
 
 if __name__ == "__main__":
 #    main(sys.argv[1:])
