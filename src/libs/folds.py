@@ -1,6 +1,3 @@
-__author__="ericperk"
-__date__ ="$Sep 26, 2009 10:29:53 PM$"
-
 import random
 
 class Fold:
@@ -13,6 +10,9 @@ class Fold:
 
     def add_negative(self, example):
         self.negatives.append(example)
+
+    def examples(self):
+        return self.positives + self.negatives
 
     def __str__(self):
         return "Positives: {0}\nNegatives: {1}\n".format(self.positives, self.negatives)

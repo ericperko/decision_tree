@@ -1,7 +1,3 @@
-
-__author__="ericperk"
-__date__ ="$Sep 25, 2009 10:30:45 PM$"
-
 import re
 
 comment_pattern = re.compile("//.*")

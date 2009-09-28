@@ -1,10 +1,8 @@
-__author__="ericperk"
-__date__ ="$Sep 25, 2009 10:12:55 PM$"
-
 import sys
 
 import data_parser.parser
 import libs.folds
+import libs.node
 
 def main(args):
     problem_name, option1, option2, option3, option4 = args
@@ -31,8 +29,15 @@ def main(args):
 
     columns, data = data_parser.parser.parse(problem_name)
     stratified_folds = libs.folds.stratify_folds(num_folds, data)
-    
+
+    for i in range(0, num_folds):
+        examples = []
+        for j in range(0, num_folds):
+            if i != j:
+                examples.extend(stratified_folds[j].examples())
+        root = libs.node.Node(examples, [], use_gain_ratio, pruning_threshold, max_tree_depth)
 
 if __name__ == "__main__":
 #    main(sys.argv[1:])
+    columns = {}
     main(["example", "1", "3", "0", "0"])
