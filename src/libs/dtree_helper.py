@@ -4,12 +4,16 @@ import math
 def calcMaxIG(examples, columns):
     maxIG = 0
     feature = None
+    maxFunction = None
     for i in range(0, len(examples[0])-1):
+        if i+1 not in columns:
+            continue
         ig, function = calcIG(i, examples, columns)
         if ig > maxIG:
             maxIG = ig
             feature = i
-    return i
+            maxFunction = function
+    return (maxIG, feature, maxFunction)
 
 def calcIG(x, examples, columns):
     prob_value_entropy_value = []
@@ -21,15 +25,18 @@ def calcIG(x, examples, columns):
     prob_neg = len(label_neg)/len(examples)
 
     if "continuous" in columns[x+1][1]:
-        pass 
+        pass
     else:
         for value in columns[x+1][1]:
             value_pos_pos = filter(lambda(y): y[x] == value, label_pos)
             value_neg_pos = filter(lambda(y): y[x] == value, label_neg)
             value_pos = filter(lambda(y): y[x] == value, examples)
 
-            prob_pos_pos = len(value_pos_pos)/len(value_pos)
-            prob_neg_pos = len(value_neg_pos)/len(value_pos)
+            try:
+                prob_pos_pos = len(value_pos_pos)/len(value_pos)
+                prob_neg_pos = len(value_neg_pos)/len(value_pos)
+            except ZeroDivisionError:
+                continue
             entropy_value_pos = calcEntropy([prob_pos_pos, prob_neg_pos])
             prob_value_entropy_value.append((len(value_pos)/len(examples), entropy_value_pos))
     entropy_y_given_x = 0

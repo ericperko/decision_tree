@@ -30,12 +30,16 @@ def main(args):
     columns, data = data_parser.parser.parse(problem_name)
     stratified_folds = libs.folds.stratify_folds(num_folds, data)
 
+    columns2 = columns.copy()
+    del columns2[len(columns)-1]
+    del columns2[0]
+
     for i in range(0, num_folds):
         examples = []
         for j in range(0, num_folds):
             if i != j:
                 examples.extend(stratified_folds[j].examples())
-        root = libs.node.Node(examples, [], use_gain_ratio, pruning_threshold, max_tree_depth)
+        root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth)
 
 if __name__ == "__main__":
 #    main(sys.argv[1:])
