@@ -2,21 +2,35 @@ from __future__ import division
 import math
 import pdb
 
-def calcMaxIG(examples, columns):
-    maxIG = 0
+def calcMaxIG(examples, columns, possible_separating_values):
+    maxIG = -1
     feature = None
     maxFunction = None
     for i in range(0, len(examples[0])-1):
         if i+1 not in columns:
             continue
-        ig, function = calcIG(i, examples, columns)
+        if i+1 in possible_separating_values:
+            best_sep = None
+            for sep in possible_separating_values[i+1]:
+                ig, function = calcIG(i, examples, columns, sep)
+                if ig > maxIG:
+                    maxIG = ig
+                    feature = i
+                    maxFunction = function
+                    best_sep = sep
+            if best_sep:
+                possible_separating_values[i+1].remove(best_sep)
+        else:
+            ig, function = calcIG(i, examples, columns)
         if ig > maxIG:
             maxIG = ig
             feature = i
             maxFunction = function
-    return (maxIG, feature, maxFunction)
+    if feature is None:
+        pdb.set_trace()
+    return (maxIG, feature, maxFunction, possible_separating_values)
 
-def calcIG(x, examples, columns):
+def calcIG(x, examples, columns, sep_value = None):
     prob_value_entropy_value = []
     test_function = None
 
@@ -26,7 +40,25 @@ def calcIG(x, examples, columns):
     prob_neg = len(label_neg)/len(examples)
 
     if "continuous" in columns[x+1][1]:
-        return (-1, None)
+        test_function = lambda(y): y[x] <= sep_value
+        value_pos_pos = filter(test_function, label_pos)
+        value_neg_pos = filter(test_function, label_neg)
+        value_pos_neg = filter(lambda(x): not test_function(x), label_pos)
+        value_neg_neg = filter(lambda(x): not test_function(x), label_neg)
+        value_pos = filter(test_function, examples)
+        value_neg = filter(lambda(x): not test_function(x), examples)
+
+        try:
+            prob_pos_pos = len(value_pos_pos)/len(value_pos)
+            prob_neg_pos = len(value_neg_pos)/len(value_pos)
+            prob_pos_neg = len(value_pos_neg)/len(value_neg)
+            prob_neg_neg = len(value_neg_neg)/len(value_neg)
+        except ZeroDivisionError:
+            return (-1, None)
+        entropy_value_pos = calcEntropy([prob_pos_pos, prob_neg_pos])
+        prob_value_entropy_value.append((len(value_pos)/len(examples), entropy_value_pos))
+        entropy_value_neg = calcEntropy([prob_pos_neg, prob_neg_neg])
+        prob_value_entropy_value.append((len(value_neg)/len(examples), entropy_value_neg))
     else:
         for value in columns[x+1][1]:
             value_pos_pos = filter(lambda(y): y[x] == value, label_pos)
@@ -63,9 +95,14 @@ def find_separating_values(examples, columns):
     separating_values = {}
     for key in columns:
         if "continuous" in columns[key][1]:
+            separating_values[key] = []
             examples2 = map(lambda(x): (x[key-1], x[-1]), examples)
             examples2 = list(set(examples2))
             examples2.sort(key=lambda(x): x[0])
-            print examples2
-        
-    
+            last = examples2.pop(0)
+            while(examples2):
+                current = examples2.pop(0)
+                if last[1] != current[1]:
+                    separating_values[key].append((last[0]+current[0])/2)
+                last = current
+    return separating_values

@@ -1,4 +1,6 @@
+import pdb
 import sys
+import datetime
 
 import data_parser.parser
 import libs.folds
@@ -36,17 +38,27 @@ def main(args):
     del columns2[len(columns)-1]
     del columns2[0]
 
+    results = []
+
+    print datetime.datetime.now()
+
     for i in range(0, num_folds):
+        print "Starting on fold {0}\n".format(i)
         examples = []
         for j in range(0, num_folds):
             if i != j:
                 examples.extend(stratified_folds[j].examples())
-
         possible_separating_values = libs.dtree_helper.find_separating_values(examples, columns2)
         root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), possible_separating_values)
         result = libs.dtree_predict.test_tree(root, stratified_folds[i].examples())
+        results.append(result)
+
+    print datetime.datetime.now()
+    
+    libs.dtree_predict.aggregate_results(results)
 
 if __name__ == "__main__":
 #    main(sys.argv[1:])
     columns = {}
-    main(["example", "1", "3", "0", "0"])
+    main(["ab", "1", "10", "0", "0"])
+    print "Finished"

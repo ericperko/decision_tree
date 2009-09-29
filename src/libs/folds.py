@@ -12,7 +12,9 @@ class Fold:
         self.negatives.append(example)
 
     def examples(self):
-        return self.positives + self.negatives
+        examples = self.positives + self.negatives
+        examples = filter(lambda(x): None not in x, examples)
+        return examples
 
     def __str__(self):
         return "Positives: {0}\nNegatives: {1}\n".format(self.positives, self.negatives)
