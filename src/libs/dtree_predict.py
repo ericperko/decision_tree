@@ -19,8 +19,11 @@ def test(node, example, depth):
         return (node.label, depth)
     if node.test_func is None:
         depth += 1
-        next_node = node.children[example[node.feature]]
-        return test(next_node, example, depth)
+        next_node = node.children.get(example[node.feature], None)
+        if next_node:
+            return test(next_node, example, depth)
+        else:
+            return ("1", depth-1)
     else:
         depth += 1
         next_node = node.children[node.test_func(example)]
