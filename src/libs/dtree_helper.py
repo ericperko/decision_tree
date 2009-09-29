@@ -2,7 +2,7 @@ from __future__ import division
 import math
 import pdb
 
-def calcMaxIG(examples, columns, possible_separating_values):
+def calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio):
     maxIG = -1
     feature = None
     maxFunction = None
@@ -12,7 +12,7 @@ def calcMaxIG(examples, columns, possible_separating_values):
         if i+1 in possible_separating_values:
             best_sep = None
             for sep in possible_separating_values[i+1]:
-                ig, function = calcIG(i, examples, columns, sep)
+                ig, function = calcIG(i, examples, columns, use_gain_ratio, sep)
                 if ig > maxIG:
                     maxIG = ig
                     feature = i
@@ -21,16 +21,16 @@ def calcMaxIG(examples, columns, possible_separating_values):
             if best_sep:
                 possible_separating_values[i+1].remove(best_sep)
         else:
-            ig, function = calcIG(i, examples, columns)
-        if ig > maxIG:
-            maxIG = ig
-            feature = i
-            maxFunction = function
+            ig, function = calcIG(i, examples, columns, use_gain_ratio)
+            if ig > maxIG:
+                maxIG = ig
+                feature = i
+                maxFunction = function
     if feature is None:
         pdb.set_trace()
     return (maxIG, feature, maxFunction, possible_separating_values)
 
-def calcIG(x, examples, columns, sep_value = None):
+def calcIG(x, examples, columns, use_gain_ratio, sep_value = None):
     prob_value_entropy_value = []
     test_function = None
 
@@ -79,6 +79,20 @@ def calcIG(x, examples, columns, sep_value = None):
     entropy_y = calcEntropy([prob_pos, prob_neg])
 
     ig = entropy_y - entropy_y_given_x
+    if use_gain_ratio:
+        if "continuous" in columns[x+1][1]:
+            test_function2 = lambda(y): y[x] <= sep_value
+            value_pos = filter(test_function2, examples)
+            value_neg = filter(lambda(x): not test_function2(x), examples)
+            probs = [len(value_pos)/len(examples), len(value_neg)/len(examples)]
+            h_x = calcEntropy(probs)
+        else:
+            probs = []
+            for value in columns[x+1][1]:
+                value_pos = filter(lambda(y): y[x] == value, examples)
+                probs.append(len(value_pos)/len(examples))
+            h_x = calcEntropy(probs)
+        ig = ig/h_x
     return (ig, test_function)
     
         

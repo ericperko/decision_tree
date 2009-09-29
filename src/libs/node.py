@@ -27,11 +27,8 @@ class Node():
             else:
                 self.label = "0"
         else:
-            if not use_gain_ratio:
-                maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values)
-                pruning_value = maxIG/calcEntropy([prob_pos, prob_neg])
-            else:
-                pass
+            maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+            pruning_value = maxIG/calcEntropy([prob_pos, prob_neg])
 
             self.feature = feature
             self.test_func = function
