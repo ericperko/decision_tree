@@ -54,7 +54,7 @@ class Node():
                             nodes_with_value = filter(lambda(y): y[self.feature] == value, examples)
                             if len(nodes_with_value) > 0:
                                 self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_depth, possible_seps)
-            elif max_tree_depth > 0:
+            elif max_tree_depth > 1:
                 max_tree_depth -= 1
                 new_columns = columns.copy()
                 if "continuous" in columns[self.feature+1][1]:
