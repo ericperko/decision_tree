@@ -95,7 +95,11 @@ class Result:
         return ((term1 + term2)/2)
 
     def precision(self):
-        return self.true_pos/(self.true_pos + self.false_pos)
+        try:
+            retval = self.true_pos/(self.true_pos + self.false_pos)
+        except ZeroDivisionError:
+            retval = 0
+        return retval
 
     def recall(self):
         return self.true_pos/(self.true_pos + self.false_neg)

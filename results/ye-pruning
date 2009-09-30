@@ -1,0 +1,2019 @@
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Eric Perko> cd .\Desktop\decision_tree\src
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> ls
+
+
+    Directory: C:\Users\Eric Perko\Desktop\decision_tree\src
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----         9/29/2009   3:27 AM            data_parser
+d----         9/29/2009   3:57 AM            libs
+d----         9/29/2009   3:27 AM            statlib
+-a---         9/29/2009   3:43 AM        614 ab.bat
+-a---         9/29/2009   3:52 AM        350 ab.out
+-a---         9/29/2009   3:43 AM        600 cr.bat
+-a---         9/29/2009   3:50 AM       2210 dtree.py
+-a---         9/27/2009   6:33 PM       1714 dtree.pyc
+-a---         9/29/2009   3:44 AM        614 sp.bat
+-a---         9/29/2009   3:45 AM        614 vo.bat
+-a---         9/29/2009   3:45 AM        614 ye.bat
+
+
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\ye.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0 0
+2009-09-29 03:59:40.211000
+Doing problem ye with pre-pruning 0.0
+
+Starting on fold 0
+
+> c:\users\eric perko\desktop\decision_tree\src\libs\dtree_helper.py(31)calcMaxIG()
+-> return (maxIG, feature, maxFunction, possible_separating_values)
+(Pdb) Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 31, in calcMaxIG
+    return (maxIG, feature, maxFunction, possible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 31, in calcMaxIG
+    return (maxIG, feature, maxFunction, possible_separating_values)
+  File "C:\Python26\lib\bdb.py", line 46, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "C:\Python26\lib\bdb.py", line 64, in dispatch_line
+    self.user_line(frame)
+  File "C:\Python26\lib\pdb.py", line 150, in user_line
+    self.interaction(frame, None)
+  File "C:\Python26\lib\pdb.py", line 194, in interaction
+    self.cmdloop()
+  File "C:\Python26\lib\cmd.py", line 130, in cmdloop
+    line = raw_input(self.prompt)
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\ye.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0 0
+2009-09-29 04:14:04.978000
+Doing problem ye with pre-pruning 0.0
+
+Starting on fold 0
+
+> c:\users\eric perko\desktop\decision_tree\src\libs\dtree_helper.py(31)calcMaxIG()
+-> return (maxIG, feature, maxFunction, possible_separating_values)
+(Pdb) p i
+7
+(Pdb) p len(examples)
+2
+(Pdb) p len(examples[0])
+9
+(Pdb) p columns
+{1: ('mcg', ['continuous']), 2: ('gvh', ['continuous']), 3: ('alm', ['continuous']), 4: ('mit', ['continuous']), 5: ('er
+l', ['continuous']), 6: ('pox', ['continuous']), 7: ('vac', ['continuous']), 8: ('nuc', ['continuous'])}
+(Pdb) p possible_separating_values
+{1: [0.58999999999999997, 0.59499999999999997, 0.62, 0.63, 0.63500000000000001, 0.64000000000000001, 0.65000000000000002
+, 0.65500000000000003, 0.68500000000000005, 0.68999999999999995, 0.70499999999999996, 0.78000000000000003, 0.78500000000
+000003, 0.79000000000000004, 0.80500000000000005], 2: [0.27000000000000002, 0.28999999999999998, 0.39500000000000002, 0.
+48499999999999999, 0.48999999999999999, 0.5, 0.505, 0.51000000000000001, 0.52000000000000002, 0.52500000000000002, 0.530
+00000000000003, 0.53500000000000003, 0.54000000000000004, 0.55000000000000004, 0.56000000000000005, 0.56499999999999995,
+ 0.57499999999999996, 0.57999999999999996, 0.58499999999999996, 0.58999999999999997, 0.59499999999999997, 0.609999999999
+99999, 0.62, 0.63, 0.63500000000000001, 0.64500000000000002, 0.69999999999999996, 0.70999999999999996, 0.760000000000000
+01, 0.76500000000000001, 0.81999999999999995, 0.82499999999999996], 3: [0.40000000000000002, 0.41999999999999998, 0.4299
+9999999999999, 0.435, 0.44500000000000001, 0.45500000000000002, 0.52000000000000002, 0.61499999999999999, 0.62, 0.63, 0.
+63500000000000001, 0.64000000000000001, 0.65000000000000002, 0.67000000000000004, 0.67500000000000004, 0.685000000000000
+05, 0.69999999999999996, 0.70999999999999996, 0.71499999999999997, 0.73499999999999999], 4: [0.0, 0.065000000000000002,
+0.080000000000000002, 0.084999999999999992, 0.089999999999999997, 0.10000000000000001, 0.10500000000000001, 0.11, 0.1450
+0000000000002, 0.14999999999999999, 0.155, 0.20500000000000002, 0.22500000000000001, 0.27500000000000002, 0.31, 0.315, 0
+.32500000000000001, 0.34000000000000002, 0.37, 0.375, 0.38, 0.38500000000000001, 0.39500000000000002, 0.4000000000000000
+2, 0.40999999999999998, 0.41999999999999998, 0.42499999999999999, 0.42999999999999999, 0.44, 0.45000000000000001, 0.4600
+0000000000002, 0.46499999999999997, 0.46999999999999997, 0.48499999999999999, 0.48999999999999999, 0.51500000000000001,
+0.52000000000000002, 0.53000000000000003, 0.53500000000000003, 0.55000000000000004, 0.55500000000000005, 0.625, 0.63, 0.
+67000000000000004, 0.67999999999999994, 0.79000000000000004, 0.81000000000000005, 0.93500000000000005], 5: [0.5, 1.0], 6
+: [0.0, 0.25, 0.5, 0.66500000000000004], 7: [0.065000000000000002, 0.16, 0.21000000000000002, 0.22999999999999998, 0.315
+, 0.32500000000000001, 0.33000000000000002, 0.33500000000000002, 0.34000000000000002, 0.34499999999999997, 0.35999999999
+999999, 0.37, 0.38, 0.39000000000000001, 0.39500000000000002, 0.40000000000000002, 0.41499999999999998, 0.45500000000000
+002, 0.46999999999999997, 0.48499999999999999, 0.495, 0.51000000000000001, 0.51500000000000001, 0.53000000000000003, 0.5
+3500000000000003, 0.54500000000000004, 0.56000000000000005, 0.57499999999999996, 0.57999999999999996, 0.5899999999999999
+7, 0.59999999999999998, 0.60499999999999998, 0.61499999999999999, 0.62, 0.68500000000000005], 8: [0.059999999999999998,
+0.11, 0.14000000000000001, 0.15000000000000002, 0.16, 0.16999999999999998, 0.17999999999999999, 0.20000000000000001, 0.2
+15, 0.26000000000000001, 0.27000000000000002, 0.27500000000000002, 0.28999999999999998, 0.32000000000000001, 0.325000000
+00000001, 0.33000000000000002, 0.34000000000000002, 0.34499999999999997, 0.34999999999999998, 0.35499999999999998, 0.359
+99999999999999, 0.36499999999999999, 0.37, 0.375, 0.38, 0.38500000000000001, 0.39000000000000001, 0.39500000000000002, 0
+.40000000000000002, 0.40500000000000003, 0.40999999999999998, 0.41999999999999998, 0.42999999999999999, 0.44, 0.46999999
+999999997, 0.47499999999999998, 0.48499999999999999, 0.48999999999999999, 0.5, 0.505, 0.53500000000000003, 0.54000000000
+000004, 0.56499999999999995, 0.56999999999999995, 0.57999999999999996, 0.58499999999999996, 0.63500000000000001, 0.64000
+000000000001, 0.67500000000000004, 0.68000000000000005, 0.69999999999999996, 0.70499999999999996, 0.72499999999999998, 0
+.745, 0.77000000000000002, 0.81499999999999995]}
+(Pdb) Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 31, in calcMaxIG
+    return (maxIG, feature, maxFunction, possible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 31, in calcMaxIG
+    return (maxIG, feature, maxFunction, possible_separating_values)
+  File "C:\Python26\lib\bdb.py", line 46, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "C:\Python26\lib\bdb.py", line 64, in dispatch_line
+    self.user_line(frame)
+  File "C:\Python26\lib\pdb.py", line 150, in user_line
+    self.interaction(frame, None)
+  File "C:\Python26\lib\pdb.py", line 194, in interaction
+    self.cmdloop()
+  File "C:\Python26\lib\cmd.py", line 130, in cmdloop
+    line = raw_input(self.prompt)
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\ye.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0 0
+2009-09-29 04:18:12.727000
+Doing problem ye with pre-pruning 0.0
+
+Starting on fold 0
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 48, in __init__
+    nodes_neg = filter(lambda(x): not self.test_func(x), examples)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 48, in <lambda>
+    nodes_neg = filter(lambda(x): not self.test_func(x), examples)
+TypeError: 'NoneType' object is not callable
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.2 0
+2009-09-29 04:18:16.681000
+Doing problem ye with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 15, in calcMaxIG
+    ig, function = calcIG(i, examples, columns, use_gain_ratio, sep)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 49, in calcIG
+    value_neg = filter(lambda(x): not test_function(x), examples)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 49, in <lambda>
+    value_neg = filter(lambda(x): not test_function(x), examples)
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\ye.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0 0
+2009-09-29 04:18:54.646000
+Doing problem ye with pre-pruning 0.0
+
+Starting on fold 0
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 17, in __init__
+    prob_pos = len(label_pos)/len(examples)
+ZeroDivisionError: float division
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.2 0
+2009-09-29 04:18:58.448000
+Doing problem ye with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 15, in calcMaxIG
+    ig, function = calcIG(i, examples, columns, use_gain_ratio, sep)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 37, in calcIG
+    label_pos = filter(lambda(y): y[-1] == "1", examples)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 37, in <lambda>
+    label_pos = filter(lambda(y): y[-1] == "1", examples)
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\ye.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.2 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.4 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.6 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.8 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 1 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing GR"
+"Doing GR"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.2 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.4 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.6 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.8 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 1 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\ye.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.2 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.4 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.6 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.8 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 1 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing GR"
+"Doing GR"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.2 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.4 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.6 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.8 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 1 0
+Traceback (most recent call last):
+  File ".\dtree.py", line 7, in <module>
+    import libs.node
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49
+    if len(nodes_pos) > 0:
+    ^
+IndentationError: unexpected indent
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\ye.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0 0
+2009-09-29 04:23:52.788000
+Doing problem ye with pre-pruning 0.0
+
+Starting on fold 0
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 52, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 14, in __init__
+    label_pos = filter(lambda(y): y[-1] == "1", examples)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 14, in <lambda>
+    label_pos = filter(lambda(y): y[-1] == "1", examples)
+RuntimeError: maximum recursion depth exceeded in cmp
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.2 0
+2009-09-29 04:23:57.450000
+Doing problem ye with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:24:04.272000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.4 0
+2009-09-29 04:24:04.382000
+Doing problem ye with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 15, in calcMaxIG
+    ig, function = calcIG(i, examples, columns, use_gain_ratio, sep)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 47, in calcIG
+    value_neg_neg = filter(lambda(x): not test_function(x), label_neg)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 47, in <lambda>
+    value_neg_neg = filter(lambda(x): not test_function(x), label_neg)
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\ye.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0 0
+2009-09-29 04:31:37.923000
+Doing problem ye with pre-pruning 0.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:32:25.930000
+Accuracy: 0.697 0.0347
+
+Weighted Accuracy: 0.593 0.0523
+
+Precision: 0.489 0.0952
+
+Recall: 0.328 0.135
+
+Size: 237.0 93.1
+
+max Depth: 19.2 3.58
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.2 0
+2009-09-29 04:32:26.042000
+Doing problem ye with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:32:33.319000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.4 0
+2009-09-29 04:32:33.439000
+Doing problem ye with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:32:41.121000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.6 0
+2009-09-29 04:32:41.236000
+Doing problem ye with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:32:49.850000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 0.8 0
+2009-09-29 04:32:49.982000
+Doing problem ye with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:32:58.421000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 1 10 1 0
+2009-09-29 04:32:58.568000
+Doing problem ye with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:33:07.078000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing GR"
+"Doing GR"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0 0
+2009-09-29 04:33:07.195000
+Doing problem ye with pre-pruning 0.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:36:07.741000
+Accuracy: 0.683 0.0276
+
+Weighted Accuracy: 0.561 0.0716
+
+Precision: 0.472 0.133
+
+Recall: 0.251 0.263
+
+Size: 155.0 115.0
+
+max Depth: 31.2 14.7
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.2 0
+2009-09-29 04:36:07.902000
+Doing problem ye with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:36:24.892000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 2.2 1.03
+
+max Depth: 0.6 0.516
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.4 0
+2009-09-29 04:36:25.012000
+Doing problem ye with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:36:35.586000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.6 0
+2009-09-29 04:36:35.709000
+Doing problem ye with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:36:46.168000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 0.8 0
+2009-09-29 04:36:46.280000
+Doing problem ye with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:36:56.638000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py ye 2 10 1 0
+2009-09-29 04:36:56.752000
+Doing problem ye with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:37:06.588000
+Accuracy: 0.696 0.00224
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+PS C:\Users\Eric Perko\Desktop\decision_tree\src>
