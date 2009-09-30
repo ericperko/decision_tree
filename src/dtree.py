@@ -58,7 +58,7 @@ def main(args):
     libs.dtree_predict.aggregate_results(results)
 
 if __name__ == "__main__":
-#    main(sys.argv[1:])
+    main(sys.argv[1:])
     columns = {}
-    main(["ab", "1", "10", "1", "0"])
+#    main(["ab", "1", "10", "1", "0"])
     print "Finished"

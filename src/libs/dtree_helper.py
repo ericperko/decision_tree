@@ -26,14 +26,16 @@ def calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio):
                 maxIG = ig
                 feature = i
                 maxFunction = function
-    if feature is None:
-        pdb.set_trace()
+    # if feature is None:
+        # I'm not sure why sometimes the feature is None by this point - there should ALWAYS be at least 1 feature or the node class should not have called calcMaxIG
+        # pdb.set_trace() #uncomment this line to load the python debugger at this line when feature is None
     return (maxIG, feature, maxFunction, possible_separating_values)
 
 def calcIG(x, examples, columns, use_gain_ratio, sep_value = None):
     prob_value_entropy_value = []
     test_function = None
 
+    # Separate the examples based on class label
     label_pos = filter(lambda(y): y[-1] == "1", examples)
     label_neg = filter(lambda(y): y[-1] == "0", examples)
     prob_pos = len(label_pos)/len(examples)
@@ -47,7 +49,7 @@ def calcIG(x, examples, columns, use_gain_ratio, sep_value = None):
         value_neg_neg = filter(lambda(x): not test_function(x), label_neg)
         value_pos = filter(test_function, examples)
         value_neg = filter(lambda(x): not test_function(x), examples)
-
+        
         try:
             prob_pos_pos = len(value_pos_pos)/len(value_pos)
             prob_neg_pos = len(value_neg_pos)/len(value_pos)
@@ -92,7 +94,10 @@ def calcIG(x, examples, columns, use_gain_ratio, sep_value = None):
                 value_pos = filter(lambda(y): y[x] == value, examples)
                 probs.append(len(value_pos)/len(examples))
             h_x = calcEntropy(probs)
-        ig = ig/h_x
+        try:
+            ig = ig/h_x
+        except ZeroDivisionError:
+            ig = 0
     return (ig, test_function)
     
         

@@ -1,1 +1,8 @@
 Decision Tree algorithm implemented in Python.
+
+Requires Python 2.6
+
+To run, type "python dtree.py <args>".
+
+The code is pretty sparsely documented right now, but I believe it is understandable with a rudimentary understanding of Python.
+Let me know if you have any problems debugging or running the code.

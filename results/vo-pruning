@@ -1,0 +1,1397 @@
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Eric Perko> cd .\Desktop\decision_tree\src
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> ls
+
+
+    Directory: C:\Users\Eric Perko\Desktop\decision_tree\src
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----         9/29/2009   3:27 AM            data_parser
+d----         9/29/2009   3:57 AM            libs
+d----         9/29/2009   3:27 AM            statlib
+-a---         9/29/2009   3:43 AM        614 ab.bat
+-a---         9/29/2009   3:52 AM        350 ab.out
+-a---         9/29/2009   3:43 AM        600 cr.bat
+-a---         9/29/2009   3:50 AM       2210 dtree.py
+-a---         9/27/2009   6:33 PM       1714 dtree.pyc
+-a---         9/29/2009   3:44 AM        614 sp.bat
+-a---         9/29/2009   3:45 AM        614 vo.bat
+-a---         9/29/2009   3:45 AM        614 ye.bat
+
+
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\vo.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0 0
+2009-09-29 03:58:25.163000
+Doing problem vo with pre-pruning 0.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:58:25.278000
+Accuracy: 0.954 0.0362
+
+Weighted Accuracy: 0.955 0.0307
+
+Precision: 0.939 0.0857
+
+Recall: 0.961 0.052
+
+Size: 25.8 4.83
+
+max Depth: 5.5 1.43
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.2 0
+2009-09-29 03:58:25.341000
+Doing problem vo with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:58:25.473000
+Accuracy: 0.962 0.0413
+
+Weighted Accuracy: 0.964 0.0358
+
+Precision: 0.939 0.0857
+
+Recall: 0.979 0.0446
+
+Size: 10.6 2.07
+
+max Depth: 3.0 0.667
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.4 0
+2009-09-29 03:58:25.539000
+Doing problem vo with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:58:25.684000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 5.0 0.0
+
+max Depth: 2.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.6 0
+2009-09-29 03:58:25.749000
+Doing problem vo with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:58:25.864000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 3.0 0.0
+
+max Depth: 1.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.8 0
+2009-09-29 03:58:25.941000
+Doing problem vo with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:58:26.082000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 3.0 0.0
+
+max Depth: 1.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 1 0
+2009-09-29 03:58:26.170000
+Doing problem vo with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:58:26.249000
+Accuracy: 0.534 0.0769
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing GR"
+"Doing GR"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0 0
+2009-09-29 03:58:26.319000
+Doing problem vo with pre-pruning 0.0
+
+Starting on fold 0
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 56, in __init__
+    self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_
+max_depth, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 56, in __init__
+    self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_
+max_depth, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 56, in __init__
+    self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_
+max_depth, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 24, in calcMaxIG
+    ig, function = calcIG(i, examples, columns, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 97, in calcIG
+    except ZeroDivisonError:
+NameError: global name 'ZeroDivisonError' is not defined
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.2 0
+2009-09-29 03:58:26.413000
+Doing problem vo with pre-pruning 0.2
+
+Starting on fold 0
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 56, in __init__
+    self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_
+max_depth, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 56, in __init__
+    self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_
+max_depth, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 56, in __init__
+    self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_
+max_depth, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 24, in calcMaxIG
+    ig, function = calcIG(i, examples, columns, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 97, in calcIG
+    except ZeroDivisonError:
+NameError: global name 'ZeroDivisonError' is not defined
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.4 0
+2009-09-29 03:58:26.510000
+Doing problem vo with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 56, in __init__
+    self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_
+max_depth, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 56, in __init__
+    self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_
+max_depth, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 56, in __init__
+    self.children[value] = Node(nodes_with_value, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_
+max_depth, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 24, in calcMaxIG
+    ig, function = calcIG(i, examples, columns, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 97, in calcIG
+    except ZeroDivisonError:
+NameError: global name 'ZeroDivisonError' is not defined
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.6 0
+2009-09-29 03:58:26.679000
+Doing problem vo with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:58:26.844000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 5.2 1.48
+
+max Depth: 1.8 0.422
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.8 0
+2009-09-29 03:58:26.923000
+Doing problem vo with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:58:27.068000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 3.0 0.0
+
+max Depth: 1.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 1 0
+2009-09-29 03:58:27.139000
+Doing problem vo with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:58:27.207000
+Accuracy: 0.534 0.0769
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+PS C:\Users\Eric Perko\Desktop\decision_tree\src>
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\vo.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0 0
+2009-09-29 03:59:46.296000
+Doing problem vo with pre-pruning 0.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:46.414000
+Accuracy: 0.954 0.0362
+
+Weighted Accuracy: 0.955 0.0307
+
+Precision: 0.939 0.0857
+
+Recall: 0.961 0.052
+
+Size: 25.8 4.83
+
+max Depth: 5.5 1.43
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.2 0
+2009-09-29 03:59:46.477000
+Doing problem vo with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:46.573000
+Accuracy: 0.962 0.0413
+
+Weighted Accuracy: 0.964 0.0358
+
+Precision: 0.939 0.0857
+
+Recall: 0.979 0.0446
+
+Size: 10.6 2.07
+
+max Depth: 3.0 0.667
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.4 0
+2009-09-29 03:59:46.634000
+Doing problem vo with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:46.723000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 5.0 0.0
+
+max Depth: 2.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.6 0
+2009-09-29 03:59:46.783000
+Doing problem vo with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:46.865000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 3.0 0.0
+
+max Depth: 1.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.8 0
+2009-09-29 03:59:46.929000
+Doing problem vo with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:47.010000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 3.0 0.0
+
+max Depth: 1.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 1 0
+2009-09-29 03:59:47.070000
+Doing problem vo with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:47.117000
+Accuracy: 0.534 0.0769
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing GR"
+"Doing GR"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0 0
+2009-09-29 03:59:47.181000
+Doing problem vo with pre-pruning 0.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:47.334000
+Accuracy: 0.954 0.0439
+
+Weighted Accuracy: 0.953 0.0416
+
+Precision: 0.947 0.0943
+
+Recall: 0.948 0.0563
+
+Size: 27.0 3.53
+
+max Depth: 5.9 1.45
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.2 0
+2009-09-29 03:59:47.397000
+Doing problem vo with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:47.533000
+Accuracy: 0.963 0.0481
+
+Weighted Accuracy: 0.962 0.046
+
+Precision: 0.947 0.0943
+
+Recall: 0.966 0.0544
+
+Size: 16.6 7.17
+
+max Depth: 4.0 1.41
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.4 0
+2009-09-29 03:59:47.595000
+Doing problem vo with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:47.716000
+Accuracy: 0.962 0.0413
+
+Weighted Accuracy: 0.964 0.0358
+
+Precision: 0.939 0.0857
+
+Recall: 0.979 0.0446
+
+Size: 7.8 1.93
+
+max Depth: 2.5 0.85
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.6 0
+2009-09-29 03:59:47.779000
+Doing problem vo with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:47.893000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 5.2 1.48
+
+max Depth: 1.8 0.422
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.8 0
+2009-09-29 03:59:47.954000
+Doing problem vo with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:48.060000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 3.0 0.0
+
+max Depth: 1.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 1 0
+2009-09-29 03:59:48.121000
+Doing problem vo with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 03:59:48.180000
+Accuracy: 0.534 0.0769
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\vo.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0 0
+2009-09-29 04:31:50.363000
+Doing problem vo with pre-pruning 0.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:50.475000
+Accuracy: 0.958 0.0391
+
+Weighted Accuracy: 0.96 0.0335
+
+Precision: 0.939 0.0857
+
+Recall: 0.972 0.0465
+
+Size: 19.6 2.5
+
+max Depth: 5.1 1.1
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.2 0
+2009-09-29 04:31:50.535000
+Doing problem vo with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:50.631000
+Accuracy: 0.962 0.0413
+
+Weighted Accuracy: 0.964 0.0358
+
+Precision: 0.939 0.0857
+
+Recall: 0.979 0.0446
+
+Size: 10.6 2.07
+
+max Depth: 3.0 0.667
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.4 0
+2009-09-29 04:31:50.695000
+Doing problem vo with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:50.783000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 5.0 0.0
+
+max Depth: 2.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.6 0
+2009-09-29 04:31:50.845000
+Doing problem vo with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:50.927000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 3.0 0.0
+
+max Depth: 1.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 0.8 0
+2009-09-29 04:31:50.985000
+Doing problem vo with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:51.066000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 3.0 0.0
+
+max Depth: 1.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 1 10 1 0
+2009-09-29 04:31:51.124000
+Doing problem vo with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:51.170000
+Accuracy: 0.534 0.0769
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing GR"
+"Doing GR"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0 0
+2009-09-29 04:31:51.229000
+Doing problem vo with pre-pruning 0.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:51.374000
+Accuracy: 0.958 0.0327
+
+Weighted Accuracy: 0.959 0.0261
+
+Precision: 0.949 0.0864
+
+Recall: 0.961 0.052
+
+Size: 21.2 2.74
+
+max Depth: 5.7 1.42
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.2 0
+2009-09-29 04:31:51.433000
+Doing problem vo with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:51.563000
+Accuracy: 0.967 0.0372
+
+Weighted Accuracy: 0.968 0.0306
+
+Precision: 0.949 0.0864
+
+Recall: 0.979 0.0446
+
+Size: 14.4 4.33
+
+max Depth: 3.8 1.03
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.4 0
+2009-09-29 04:31:51.622000
+Doing problem vo with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:51.742000
+Accuracy: 0.962 0.0413
+
+Weighted Accuracy: 0.964 0.0358
+
+Precision: 0.939 0.0857
+
+Recall: 0.979 0.0446
+
+Size: 7.8 1.93
+
+max Depth: 2.5 0.85
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.6 0
+2009-09-29 04:31:51.800000
+Doing problem vo with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:51.911000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 5.2 1.48
+
+max Depth: 1.8 0.422
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 0.8 0
+2009-09-29 04:31:51.969000
+Doing problem vo with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:52.073000
+Accuracy: 0.97 0.0352
+
+Weighted Accuracy: 0.972 0.0325
+
+Precision: 0.947 0.0666
+
+Recall: 0.99 0.0316
+
+Size: 3.0 0.0
+
+max Depth: 1.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py vo 2 10 1 0
+2009-09-29 04:31:52.131000
+Doing problem vo with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 04:31:52.188000
+Accuracy: 0.534 0.0769
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+PS C:\Users\Eric Perko\Desktop\decision_tree\src>

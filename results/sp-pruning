@@ -1,0 +1,864 @@
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Eric Perko> cd .\Desktop\decision_tree\src
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> ls
+
+
+    Directory: C:\Users\Eric Perko\Desktop\decision_tree\src
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----         9/29/2009   3:27 AM            data_parser
+d----         9/29/2009   4:31 AM            libs
+d----         9/29/2009   3:27 AM            statlib
+-a---         9/29/2009   3:43 AM        614 ab.bat
+-a---         9/29/2009   3:52 AM        350 ab.out
+-a---         9/29/2009   3:43 AM        600 cr.bat
+-a---         9/29/2009   3:50 AM       2210 dtree.py
+-a---         9/27/2009   6:33 PM       1714 dtree.pyc
+-a---         9/29/2009   3:44 AM        614 sp.bat
+-a---         9/29/2009   3:45 AM        614 vo.bat
+-a---         9/29/2009   3:45 AM        614 ye.bat
+
+
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> C:\Python26\python.exe .\dtree.py sp 2 10 0.4 0
+2009-09-29 12:58:58.148000
+Doing problem sp with pre-pruning 0.4
+
+Starting on fold 0
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 15, in calcMaxIG
+    ig, function = calcIG(i, examples, columns, use_gain_ratio, sep)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 47, in calcIG
+    value_neg_neg = filter(lambda(x): not test_function(x), label_neg)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 47, in <lambda>
+    value_neg_neg = filter(lambda(x): not test_function(x), label_neg)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 43, in <lambda>
+    test_function = lambda(y): y[x] <= sep_value
+KeyboardInterrupt
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> C:\Python26\python.exe .\dtree.py sp 2 10 0.4 0
+2009-09-29 13:00:07.399000
+Doing problem sp with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 13:12:46.077000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+PS C:\Users\Eric Perko\Desktop\decision_tree\src>
+
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Eric Perko> cd .\Desktop\decision_tree\src
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> ls
+
+
+    Directory: C:\Users\Eric Perko\Desktop\decision_tree\src
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----         9/29/2009   3:27 AM            data_parser
+d----         9/29/2009   4:31 AM            libs
+d----         9/29/2009   3:27 AM            statlib
+-a---         9/29/2009   3:43 AM        614 ab.bat
+-a---         9/29/2009   3:52 AM        350 ab.out
+-a---         9/29/2009   3:43 AM        600 cr.bat
+-a---         9/29/2009   3:50 AM       2210 dtree.py
+-a---         9/27/2009   6:33 PM       1714 dtree.pyc
+-a---         9/29/2009   3:44 AM        614 sp.bat
+-a---         9/29/2009   3:45 AM        614 vo.bat
+-a---         9/29/2009   3:45 AM        614 ye.bat
+
+
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> C:\Python26\python.exe sp 2 10 0.6 0
+C:\Python26\python.exe: can't open file 'sp': [Errno 2] No such file or directory
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> C:\Python26\python.exe .\dtree.py sp 2 10 0.6 0
+2009-09-29 13:01:48.515000
+Doing problem sp with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 13:14:32.610000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+PS C:\Users\Eric Perko\Desktop\decision_tree\src>
+
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Eric Perko> cd .\Desktop\decision_tree\src
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> ls
+
+
+    Directory: C:\Users\Eric Perko\Desktop\decision_tree\src
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----         9/29/2009   3:27 AM            data_parser
+d----         9/29/2009   4:31 AM            libs
+d----         9/29/2009   3:27 AM            statlib
+-a---         9/29/2009   3:43 AM        614 ab.bat
+-a---         9/29/2009   3:52 AM        350 ab.out
+-a---         9/29/2009   3:43 AM        600 cr.bat
+-a---         9/29/2009   3:50 AM       2210 dtree.py
+-a---         9/27/2009   6:33 PM       1714 dtree.pyc
+-a---         9/29/2009   3:44 AM        614 sp.bat
+-a---         9/29/2009   3:45 AM        614 vo.bat
+-a---         9/29/2009   3:45 AM        614 ye.bat
+
+
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> C:\Python26\python.exe .\dtree.py sp 2 10 0.8 0
+2009-09-29 13:02:42.502000
+Doing problem sp with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 13:15:20.147000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> C:\Python26\python.exe .\dtree.py sp 2 10 1 0
+2009-09-29 13:21:52.207000
+Doing problem sp with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 13:33:38.760000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+PS C:\Users\Eric Perko\Desktop\decision_tree\src>
+
+Windows PowerShell
+Copyright (C) 2009 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Eric Perko> cd .\Desktop\decision_tree\src
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> ls
+
+
+    Directory: C:\Users\Eric Perko\Desktop\decision_tree\src
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----         9/29/2009   3:27 AM            data_parser
+d----         9/29/2009   3:57 AM            libs
+d----         9/29/2009   3:27 AM            statlib
+-a---         9/29/2009   3:43 AM        614 ab.bat
+-a---         9/29/2009   3:52 AM        350 ab.out
+-a---         9/29/2009   3:43 AM        600 cr.bat
+-a---         9/29/2009   3:50 AM       2210 dtree.py
+-a---         9/27/2009   6:33 PM       1714 dtree.pyc
+-a---         9/29/2009   3:44 AM        614 sp.bat
+-a---         9/29/2009   3:45 AM        614 vo.bat
+-a---         9/29/2009   3:45 AM        614 ye.bat
+
+
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\sp.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 1 10 0 0
+2009-09-29 03:57:52.374000
+Doing problem sp with pre-pruning 0.0
+
+Starting on fold 0
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 15, in calcMaxIG
+    ig, function = calcIG(i, examples, columns, use_gain_ratio, sep)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 48, in calcIG
+    value_pos = filter(test_function, examples)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 43, in <lambda>
+    test_function = lambda(y): y[x] <= sep_value
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\sp.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 1 10 0 0
+2009-09-29 04:00:08.645000
+Doing problem sp with pre-pruning 0.0
+
+Starting on fold 0
+
+> c:\users\eric perko\desktop\decision_tree\src\libs\dtree_helper.py(31)calcMaxIG()
+-> return (maxIG, feature, maxFunction, possible_separating_values)
+(Pdb) Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 50, in __init__
+    self.children[False] = Node(nodes_neg, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dep
+th, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 49, in __init__
+    self.children[True] = Node(nodes_pos, new_columns,  use_gain_ratio, pruning_threshhold, max_tree_depth, use_max_dept
+h, possible_seps)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 31, in calcMaxIG
+    return (maxIG, feature, maxFunction, possible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 31, in calcMaxIG
+    return (maxIG, feature, maxFunction, possible_separating_values)
+  File "C:\Python26\lib\bdb.py", line 46, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "C:\Python26\lib\bdb.py", line 64, in dispatch_line
+    self.user_line(frame)
+  File "C:\Python26\lib\pdb.py", line 150, in user_line
+    self.interaction(frame, None)
+  File "C:\Python26\lib\pdb.py", line 194, in interaction
+    self.cmdloop()
+  File "C:\Python26\lib\cmd.py", line 130, in cmdloop
+    line = raw_input(self.prompt)
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\sp.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 1 10 0 0
+2009-09-29 04:14:02.323000
+Doing problem sp with pre-pruning 0.0
+
+Starting on fold 0
+
+Traceback (most recent call last):
+  File ".\dtree.py", line 62, in <module>
+    main(sys.argv[1:])
+  File ".\dtree.py", line 53, in main
+    root = libs.node.Node(examples, columns2, use_gain_ratio, pruning_threshold, max_tree_depth, (max_tree_depth > 0), p
+ossible_separating_values)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\node.py", line 30, in __init__
+    maxIG, feature, function, possible_seps = calcMaxIG(examples, columns, possible_separating_values, use_gain_ratio)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 15, in calcMaxIG
+    ig, function = calcIG(i, examples, columns, use_gain_ratio, sep)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 38, in calcIG
+    label_neg = filter(lambda(y): y[-1] == "0", examples)
+  File "C:\Users\Eric Perko\Desktop\decision_tree\src\libs\dtree_helper.py", line 38, in <lambda>
+    label_neg = filter(lambda(y): y[-1] == "0", examples)
+KeyboardInterrupt
+Terminate batch job (Y/N)? y
+PS C:\Users\Eric Perko\Desktop\decision_tree\src> .\sp.bat
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing IG"
+"Doing IG"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 1 10 0 0
+2009-09-29 04:32:07.277000
+Doing problem sp with pre-pruning 0.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 05:47:09.996000
+Accuracy: 0.927 0.0102
+
+Weighted Accuracy: 0.925 0.0122
+
+Precision: 0.897 0.0139
+
+Recall: 0.919 0.0248
+
+Size: 427.0 19.4
+
+max Depth: 24.5 2.22
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 1 10 0.2 0
+2009-09-29 05:47:10.661000
+Doing problem sp with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 06:11:50.409000
+Accuracy: 0.83 0.0352
+
+Weighted Accuracy: 0.818 0.0281
+
+Precision: 0.824 0.116
+
+Recall: 0.76 0.0961
+
+Size: 11.2 1.99
+
+max Depth: 3.6 0.516
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 1 10 0.4 0
+2009-09-29 06:11:51.076000
+Doing problem sp with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 06:20:07.036000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 1 10 0.6 0
+2009-09-29 06:20:07.701000
+Doing problem sp with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 06:28:23.527000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 1 10 0.8 0
+2009-09-29 06:28:24.191000
+Doing problem sp with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 06:36:39.995000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 1 10 1 0
+2009-09-29 06:36:40.660000
+Doing problem sp with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 06:44:58.970000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>echo "Doing GR"
+"Doing GR"
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 2 10 0 0
+2009-09-29 06:44:59.636000
+Doing problem sp with pre-pruning 0.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 12:35:40.045000
+Accuracy: 0.913 0.0151
+
+Weighted Accuracy: 0.911 0.0174
+
+Precision: 0.882 0.0214
+
+Recall: 0.901 0.0344
+
+Size: 580.0 37.1
+
+max Depth: 58.0 5.54
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 2 10 0.2 0
+2009-09-29 12:35:40.711000
+Doing problem sp with pre-pruning 0.2
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 16:34:27.891000
+Accuracy: 0.913 0.0148
+
+Weighted Accuracy: 0.901 0.0167
+
+Precision: 0.93 0.0286
+
+Recall: 0.843 0.033
+
+Size: 276.0 56.4
+
+max Depth: 27.5 8.49
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 2 10 0.4 0
+2009-09-29 16:34:28.600000
+Doing problem sp with pre-pruning 0.4
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 16:46:53.210000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 2 10 0.6 0
+2009-09-29 16:46:53.906000
+Doing problem sp with pre-pruning 0.6
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 16:59:24.966000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 2 10 0.8 0
+2009-09-29 16:59:25.729000
+Doing problem sp with pre-pruning 0.8
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 17:11:25.598000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+
+C:\Users\Eric Perko\Desktop\decision_tree\src>C:\Python26\python.exe .\dtree.py sp 2 10 1 0
+2009-09-29 17:11:26.263000
+Doing problem sp with pre-pruning 1.0
+
+Starting on fold 0
+
+Starting on fold 1
+
+Starting on fold 2
+
+Starting on fold 3
+
+Starting on fold 4
+
+Starting on fold 5
+
+Starting on fold 6
+
+Starting on fold 7
+
+Starting on fold 8
+
+Starting on fold 9
+
+2009-09-29 17:22:56.293000
+Accuracy: 0.606 0.00062
+
+Weighted Accuracy: 0.5 0.0
+
+Precision: 0.0 0.0
+
+Recall: 0.0 0.0
+
+Size: 1.0 0.0
+
+max Depth: 0.0 0.0
+Finished
+PS C:\Users\Eric Perko\Desktop\decision_tree\src>
